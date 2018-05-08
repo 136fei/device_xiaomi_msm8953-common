@@ -179,7 +179,8 @@ telephony.lteOnCdmaDevice=1
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.timed.enable=true
+persist.timed.enable=true \
+persist.delta_time.enable=true
 
 # Tcp
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -189,13 +190,17 @@ net.tcp.2g_init_rwnd=10
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
 
+# ro.build.romer=136fei
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.language=zh \
+persist.sys.country=CN \
+persist.sys.localevar= \
+persist.sys.timezone=Asia/Shanghai \
+ro.product.locale=zh-CN
+
 # Higher fling velocities to smooth scrolling
 # and provide better responsiveness
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.min.fling_velocity=160 \
 ro.max.fling_velocity=20000
-
-#low audio flinger standby delay to reduce power consumption
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.audio.flinger_standbytime_ms=300
 
